@@ -4,7 +4,7 @@ import type { Votes } from "../../types/votes";
 import styles from "./VoteStats.module.css";
 
 /** Props for the VoteStats component.*/
-interface IVoteStatsProps {
+interface VoteStatsProps {
   votes: Votes; // An object containing the counts for each vote type.
   totalVotes: number; // The total number of votes.
   positiveRate: number; // The percentage of positive votes.
@@ -12,10 +12,10 @@ interface IVoteStatsProps {
 
 /**
  * A component that displays the statistics of the votes.
- * @param {IVoteStatsProps} props - The props for the component.
+ * @param {VoteStatsProps} props - The props for the component.
  * @returns {JSX.Element} The rendered VoteStats component.
  */
-export default function VoteStats({ votes, totalVotes = 0, positiveRate = 0 }: IVoteStatsProps) {
+export default function VoteStats({ votes, totalVotes = 0, positiveRate = 0 }: VoteStatsProps) {
   return (
     <div className={styles.container}>
       <p className={styles.stat}>
