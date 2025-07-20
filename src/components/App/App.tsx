@@ -6,12 +6,12 @@ import Notification from "../Notification/Notification";
 import VoteOptions from "../VoteOptions/VoteOptions";
 import VoteStats from "../VoteStats/VoteStats";
 // types
-import type { IVotes, TVoteType } from "../../types/votes";
+import type { Votes, VoteType } from "../../types/votes";
 // styles
 import css from "./App.module.css";
 
 /** initial state for the votes. */
-const initialVotes: IVotes = {
+const initialVotes: Votes = {
   good: 0,
   neutral: 0,
   bad: 0,
@@ -23,13 +23,13 @@ const initialVotes: IVotes = {
  * @returns {JSX.Element} The rendered App component.
  */
 export default function App() {
-  const [votes, setVotes] = useState<IVotes>(initialVotes);
+  const [votes, setVotes] = useState<Votes>(initialVotes);
 
   /**
    * Handles a vote by updating the state.
    * @param {TVoteType} voteType - The type of vote to handle.
    */
-  function handleVote(voteType: TVoteType) {
+  function handleVote(voteType: VoteType) {
     setVotes((prevVotes) => {
       const currVotes = { ...prevVotes };
       currVotes[voteType]++;

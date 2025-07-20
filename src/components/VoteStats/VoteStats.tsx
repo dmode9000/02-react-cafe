@@ -1,11 +1,11 @@
 // types
-import type { IVotes } from "../../types/votes";
+import type { Votes } from "../../types/votes";
 // styles
 import styles from "./VoteStats.module.css";
 
 /** Props for the VoteStats component.*/
 interface IVoteStatsProps {
-  votes: IVotes; // An object containing the counts for each vote type.
+  votes: Votes; // An object containing the counts for each vote type.
   totalVotes: number; // The total number of votes.
   positiveRate: number; // The percentage of positive votes.
 }
