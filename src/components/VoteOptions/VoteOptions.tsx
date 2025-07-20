@@ -1,5 +1,5 @@
 // types
-import type { TVoteType } from "../../types/votes";
+import type { VoteType } from "../../types/votes";
 // styles
 import css from "./VoteOptions.module.css";
 
@@ -7,9 +7,9 @@ import css from "./VoteOptions.module.css";
 interface IVoteOptionsProps {
   /**
    * Function to call when a vote button is clicked.
-   * @param {TVoteType} voteType - The type of vote cast.
+   * @param {VoteType} voteType - The type of vote cast.
    */
-  onVote: (voteType: TVoteType) => void;
+  onVote: (voteType: VoteType) => void;
   /**
    * Function to call when the reset button is clicked.
    */

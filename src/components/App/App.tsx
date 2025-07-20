@@ -27,7 +27,7 @@ export default function App() {
 
   /**
    * Handles a vote by updating the state.
-   * @param {TVoteType} voteType - The type of vote to handle.
+   * @param {VoteType} voteType - The type of vote to handle.
    */
   function handleVote(voteType: VoteType) {
     setVotes((prevVotes) => {
